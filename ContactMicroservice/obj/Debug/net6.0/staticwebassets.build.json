@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "vq3sWgRGS0P7bC9xOc8RSM4vgYDd5WDPC6jpC8MvGFo=",
+  "Source": "ContactMicroservice",
+  "BasePath": "_content/ContactMicroservice",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
