@@ -8,7 +8,7 @@ namespace ContactMicroservice.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly PhoneBookContext _dbContext;
+        protected readonly PhoneBookContext _dbContext;
         private readonly DbSet<T> _dbSet;
         public Repository(PhoneBookContext dbContext)
         {
@@ -35,19 +35,25 @@ namespace ContactMicroservice.Repositories
         {
             var entity = await _dbSet.FindAsync(id);
             _dbSet.Remove(entity);
-            await _dbContext.SaveChangesAsync();
         }
 
         public async Task AddAsync(T entity)
         {
             await _dbSet.AddAsync(entity);
-            await _dbContext.SaveChangesAsync();
         }
 
         public async Task UpdateAsync(T entity)
         {
-            var entry = _dbContext.Entry(entity).State = EntityState.Modified;
-            await _dbContext.SaveChangesAsync();
+            await Task.Run(() =>
+            {
+                _dbContext.Entry(entity).State = EntityState.Modified;
+            });
         }
+
+        public async Task<bool> SaveAsync()
+        {
+            return await _dbContext.SaveChangesAsync() == 1;
+        }
+
     }
 }

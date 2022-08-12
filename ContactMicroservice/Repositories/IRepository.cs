@@ -7,8 +7,9 @@ namespace ContactMicroservice.Repositories
         Task<IList<T>> GetAllAsync();
         Task<IList<T>> GetAllAsync(Expression<Func<T, bool>> filter);
         Task<T> GetAsync(Expression<Func<T, bool>> filter);
-        Task RemoveAsync(Guid id);
+        Task RemoveAsync(Guid uuid);
         Task AddAsync(T entity);
         Task UpdateAsync(T entity);
+        Task<bool> SaveAsync();
     }
 }

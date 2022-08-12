@@ -5,11 +5,11 @@ VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{919A44C3-C096-435C-9122-27788DF0E9A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactMicroservice", "ContactMicroservice\ContactMicroservice.csproj", "{1A63A856-D055-414A-B33B-EA4B87FF8E6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactMicroservice", "ContactMicroservice\ContactMicroservice.csproj", "{1A63A856-D055-414A-B33B-EA4B87FF8E6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportMicroservice", "ReportMicroservice\ReportMicroservice.csproj", "{4EAD70BC-B769-4B3A-BADB-E3B459928014}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReportMicroservice", "ReportMicroservice\ReportMicroservice.csproj", "{4EAD70BC-B769-4B3A-BADB-E3B459928014}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBookWebUI", "PhoneBookWebUI\PhoneBookWebUI.csproj", "{E5E39291-FEEB-42B5-BFE6-657F5CCAAC99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneBookWebUI", "PhoneBookWebUI\PhoneBookWebUI.csproj", "{E5E39291-FEEB-42B5-BFE6-657F5CCAAC99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
