@@ -1,4 +1,5 @@
 using ContactMicroservice.DBContext;
+using ContactMicroservice.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,8 @@ builder.Services.AddDbContext<PhoneBookContext>(opt =>
 
 //Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+builder.Services.AddTransient<IContactRepository, ConctactRepository>();
+builder.Services.AddTransient<IContactInfoRepository, ContactInfoRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
