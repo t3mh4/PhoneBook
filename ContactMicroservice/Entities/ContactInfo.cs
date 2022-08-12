@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 #nullable disable
 namespace ContactMicroservice.Entities
@@ -19,6 +20,9 @@ namespace ContactMicroservice.Entities
         public string EMail { get; set; }
         [Required]
         public string Location { get; set; }
+        public Guid ContactUUID { get; set; }
+
+        [JsonIgnore]
         public virtual Contact Contact { get; set; }
     }
 }
