@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "cuiXTywgkXLIoaX6tmyrM9dtQ9E0e/HRl42o2ZSoQDHEqZBhQO+tQlhvqU4/k3dnRfznVr9uf56lndskmIk2iA==",
+  "dgSpecHash": "MZ9aseYt8tZaJMuPQBMwfxc/hdkwQ2otPj9TNATG4XeS704+w1g9+wRIqzqrOlWq8xPhFfHr1TciCrhTPdKd2A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ahmet\\Documents\\GitHub\\PhoneBook\\ReportMicroservice\\ReportMicroservice.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ahmet\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\6.0.8\\microsoft.aspnetcore.diagnostics.entityframeworkcore.6.0.8.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.8\\microsoft.entityframeworkcore.6.0.8.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.8\\microsoft.entityframeworkcore.abstractions.6.0.8.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.8\\microsoft.entityframeworkcore.analyzers.6.0.8.nupkg.sha512",

@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using ReportMicroservice.DBContext;
+using ReportMicroservice.Managers;
+using ReportMicroservice.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,10 @@ builder.Services.AddDbContext<PhoneBookContext>(opt =>
 {
     opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+//Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+builder.Services.AddTransient<IReportService, ReportService>();
+builder.Services.AddTransient<IReportManager, ReportManager>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
