@@ -11,9 +11,21 @@ build_property.RootNamespace = PhoneBookWebUI
 build_property.ProjectDir = C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBookWebUI\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBookWebUI
 build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Ahmet/Documents/GitHub/PhoneBook/PhoneBookWebUI/Views/ContactInfo/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdEluZm9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ahmet/Documents/GitHub/PhoneBook/PhoneBookWebUI/Views/ContactInfo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdEluZm9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ahmet/Documents/GitHub/PhoneBook/PhoneBookWebUI/Views/Contact/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Ahmet/Documents/GitHub/PhoneBook/PhoneBookWebUI/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=

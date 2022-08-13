@@ -30,9 +30,9 @@ namespace ContactMicroservice.Controllers
         }
 
         [HttpDelete("Remove")]
-        public async void Remove(Guid uuid)
+        public async Task<IActionResult> Remove(Guid uuid)
         {
-            await _manager.RemoveAsync(uuid);
+            return Ok(await _manager.RemoveAsync(uuid));
         }
     }
 }
