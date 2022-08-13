@@ -25,4 +25,8 @@
     <Folder Include="Enum\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PhoneBook.Dtos\PhoneBook.Dtos.csproj" />
+  </ItemGroup>
+
 </Project>

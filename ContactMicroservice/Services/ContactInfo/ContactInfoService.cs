@@ -24,5 +24,19 @@ namespace ContactMicroservice.Services
                     PhoneNumber = s.PhoneNumber
                 }).ToListAsync();
         }
+
+        public async Task<List<LocationReportDto>> GetLocationReport()
+        {
+            var query = from ci in _dbContext.ContactInfos
+                        group ci by ci.Location into grp
+                        select new LocationReportDto
+                        {
+                            Location = grp.Key,
+                            PersonCount = grp.Select(c => c.ContactUUID).Distinct().Count(),
+                            PhoneNumberCount = grp.Select(c => c.PhoneNumber).Count()
+                        };
+            return await query.AsNoTracking().ToListAsync() ?? new List<LocationReportDto>();
+
+        }
     }
 }

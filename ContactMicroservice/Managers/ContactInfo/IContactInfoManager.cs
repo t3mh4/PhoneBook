@@ -7,6 +7,7 @@ namespace ContactMicroservice.Managers
     {
         Task<bool> SaveAsync(ContactInfoDto contactInfoDto);
         Task<bool> RemoveAsync(Guid uuid);
-        Task<List<ContactInfoDto>> GetAllByContactUUID(Guid contactUUID);
+        Task<List<ContactInfoDto>> GetAllByContactUUID(Guid contactUUID); 
+        Task<List<LocationReportDto>> GetLocationReport();
     }
 }

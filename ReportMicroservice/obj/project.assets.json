@@ -369,6 +369,16 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "PhoneBook.Dtos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/PhoneBook.Dtos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PhoneBook.Dtos.dll": {}
+        }
       }
     }
   },
@@ -961,6 +971,11 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "PhoneBook.Dtos/1.0.0": {
+      "type": "project",
+      "path": "../PhoneBook.Dtos/PhoneBook.Dtos.csproj",
+      "msbuildProject": "../PhoneBook.Dtos/PhoneBook.Dtos.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -970,6 +985,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.8",
       "Microsoft.Extensions.DependencyInjection >= 6.0.0",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 6.0.6",
+      "PhoneBook.Dtos >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -1003,7 +1019,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Ahmet\\Documents\\GitHub\\PhoneBook\\PhoneBook.Dtos\\PhoneBook.Dtos.csproj": {
+              "projectPath": "C:\\Users\\Ahmet\\Documents\\GitHub\\PhoneBook\\PhoneBook.Dtos\\PhoneBook.Dtos.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,4 +1,5 @@
-﻿using ReportMicroservice.Services;
+﻿using PhoneBook.Dtos;
+using ReportMicroservice.Services;
 
 namespace ReportMicroservice.Managers
 {
