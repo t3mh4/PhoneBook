@@ -15,6 +15,7 @@ namespace ContactMicroservice.Services
         public async Task<List<ContactDto>> GetAll()
         {
             return await (from c in _dbContext.Contacts
+                          orderby c.Name,c.Surname
                           select new ContactDto
                           {
                               UUID = c.UUID,
