@@ -1,3 +1,4 @@
+using ContactMicroservice;
 using ContactMicroservice.DBContext;
 using ContactMicroservice.Managers;
 using ContactMicroservice.Services;
@@ -15,6 +16,7 @@ builder.Services.AddDbContext<PhoneBookContext>(opt =>
 {
     opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 //Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();

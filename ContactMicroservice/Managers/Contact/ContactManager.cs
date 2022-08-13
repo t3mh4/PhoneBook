@@ -1,18 +1,23 @@
-﻿using ContactMicroservice.Entities;
+﻿using AutoMapper;
+using ContactMicroservice.Entities;
 using ContactMicroservice.Services;
+using PhoneBook.Dtos;
 
 namespace ContactMicroservice.Managers
 {
     public class ContactManager : IContactManager
     {
         private readonly IContactService _contactService;
-        public ContactManager(IContactService contactService)
+        private readonly IMapper _mapper;
+        public ContactManager(IContactService contactService, IMapper mapper)
         {
             _contactService = contactService;
+            _mapper = mapper;
         }
 
-        public async Task<bool> SaveAsync(Contact contact)
+        public async Task<bool> SaveAsync(ContactDto contactDto)
         {
+            var contact = _mapper.Map<Contact>(contactDto);
             if (contact.UUID == Guid.Empty)
                 await _contactService.AddAsync(contact);
             else
@@ -26,9 +31,9 @@ namespace ContactMicroservice.Managers
             return await _contactService.SaveAsync();
         }
 
-        public async Task<IList<Contact>> GetAll()
+        public async Task<IList<ContactDto>> GetAll()
         {
-            return await _contactService.GetAllAsync();
+            return await _contactService.GetAll();
         } 
     }
 }

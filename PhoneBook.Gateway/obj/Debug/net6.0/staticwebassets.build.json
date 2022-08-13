@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "kezFDuN3CdE5pXyJY3FmsuRJSmgSIl8aEhE5/m6YSg0=",
+  "Source": "PhoneBook.Gateway",
+  "BasePath": "_content/PhoneBook.Gateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
