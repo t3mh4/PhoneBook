@@ -13,7 +13,7 @@ namespace ContactMicroservice.Entities
         //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid UUID { get; set; }
 
-        [StringLength(15)]
+        [StringLength(25)]
         [Required]
         public string PhoneNumber { get; set; }
         [Required]
