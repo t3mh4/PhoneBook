@@ -17,9 +17,7 @@ namespace PhoneBookWebUI.Controllers
 
         public async Task<ActionResult> Index()
         {
-            List<ContactDto> contactList;
-            contactList = await _httpClient.GetFromJsonAsync<List<ContactDto>>("contact/getall") ?? new List<ContactDto>();
-            return View(contactList);
+            return View(await _httpClient.GetFromJsonAsync<List<ContactDto>>("contact/getall"));
         }      
 
         public ActionResult Create()

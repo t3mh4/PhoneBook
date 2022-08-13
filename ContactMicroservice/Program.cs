@@ -18,7 +18,7 @@ builder.Services.AddDbContext<PhoneBookContext>(opt =>
 });
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
-//Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
+//Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore --Migration için
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddTransient<IContactService, ContactService>();
 builder.Services.AddTransient<IContactInfoService, ContactInfoService>();

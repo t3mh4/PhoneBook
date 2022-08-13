@@ -15,13 +15,14 @@ namespace ContactMicroservice.Services
         public async Task<List<ContactDto>> GetAll()
         {
             return await (from c in _dbContext.Contacts
+                          orderby c.Name, c.Surname
                           select new ContactDto
                           {
                               UUID = c.UUID,
                               Name = c.Name,
                               Surname = c.Surname,
                               Company = c.Company
-                          }).AsNoTracking().ToListAsync();
+                          }).AsNoTracking().ToListAsync() ?? new List<ContactDto>();
         }
 
         public override async Task RemoveAsync(Guid uuid)
@@ -41,5 +42,6 @@ namespace ContactMicroservice.Services
                 transaction.RollbackAsync();
             }
         }
+        
     }
 }

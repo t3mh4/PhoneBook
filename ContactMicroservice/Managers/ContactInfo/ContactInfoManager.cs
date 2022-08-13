@@ -20,6 +20,11 @@ namespace ContactMicroservice.Managers
             return await _contactInfoService.GetAllByContactUUID(contactUUID);
         }
 
+        public async Task<List<LocationReportDto>> GetLocationReport()
+        {
+            return await _contactInfoService.GetLocationReport();
+        }
+
         public async Task<bool> RemoveAsync(Guid uuid)
         {
             await _contactInfoService.RemoveAsync(uuid);

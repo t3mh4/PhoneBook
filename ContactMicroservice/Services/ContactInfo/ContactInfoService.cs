@@ -22,7 +22,21 @@ namespace ContactMicroservice.Services
                     EMail = s.EMail,
                     Location = s.Location,
                     PhoneNumber = s.PhoneNumber
-                }).ToListAsync();
+                }).AsNoTracking().ToListAsync() ?? new List<ContactInfoDto>();
+        }
+
+        public async Task<List<LocationReportDto>> GetLocationReport()
+        {
+            var query = from ci in _dbContext.ContactInfos
+                        group ci by ci.Location into grp
+                        select new LocationReportDto
+                        {
+                            Location = grp.Key,
+                            PersonCount = grp.Select(c => c.ContactUUID).Distinct().Count(),
+                            PhoneNumberCount = grp.Select(c => c.PhoneNumber).Count()
+                        };
+            return await query.AsNoTracking().ToListAsync() ?? new List<LocationReportDto>();
+
         }
     }
 }

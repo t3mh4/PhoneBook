@@ -25,3 +25,16 @@ C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\obj\Debug\net6.0\re
 C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\obj\Debug\net6.0\ReportMicroservice.pdb
 C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\obj\Debug\net6.0\ReportMicroservice.genruntimeconfig.cache
 C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\obj\Debug\net6.0\ref\ReportMicroservice.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\Npgsql.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\PhoneBook.Dtos.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\PhoneBook.Dtos.pdb
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\PhoneBook.Core.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\PhoneBook.Core.pdb

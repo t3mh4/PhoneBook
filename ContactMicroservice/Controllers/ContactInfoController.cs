@@ -34,6 +34,13 @@ namespace ContactMicroservice.Controllers
         {
             return Ok(await _manager.GetAllByContactUUID(contactUUID));
         }
-       
+
+        [HttpGet("GetLocationReport")]
+        public async Task<IActionResult> GetLocationReport()
+        {
+            return Ok(await _manager.GetLocationReport());
+        }
+
+
     }
 }
