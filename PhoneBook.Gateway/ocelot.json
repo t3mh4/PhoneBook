@@ -1,31 +1,7 @@
 {
   "Routes": [
-    //{
-    //  "DownstreamPathTemplate": "/api/Contact/GetAll",
-    //  "DownstreamScheme": "https",
-    //  "DownstreamHostAndPorts": [
-    //    {
-    //      "Host": "localhost",
-    //      "Port": 15001
-    //    }
-    //  ],
-    //  "UpstreamPathTemplate": "/contact/GetAll",
-    //  "UpstreamHttpMethod": [ "GET" ]
-    //}
-    //{
-    //  "DownstreamPathTemplate": "/{url}",
-    //  "DownstreamScheme": "https",
-    //  "DownstreamHostAndPorts": [
-    //    {
-    //      "Host": "localhost",
-    //      "Port": 15001
-    //    }
-    //  ],
-    //  "UpstreamPathTemplate": "/{url}",
-    //  "UpstreamHttpMethod": [ "Get" ]
-    //}
     {
-      "DownstreamPathTemplate": "/api/Contact/{url}",
+      "DownstreamPathTemplate": "/api/contact/{url}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -34,7 +10,19 @@
         }
       ],
       "UpstreamPathTemplate": "/contact/{url}",
-      "UpstreamHttpMethod": [ "Get" ,"Post"]
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/contactinfo/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 15001
+        }
+      ],
+      "UpstreamPathTemplate": "/contactinfo/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete" ]
     }
   ]
 }

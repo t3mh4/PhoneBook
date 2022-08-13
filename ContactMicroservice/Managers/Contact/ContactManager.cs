@@ -27,7 +27,8 @@ namespace ContactMicroservice.Managers
 
         public async Task<bool> RemoveAsync(Guid uuid)
         {
-            await _contactService.RemoveAsync(uuid);
+            var contact =await _contactService.GetAsync(g => g.UUID == uuid);
+            await _contactService.RemoveAsync(contact);
             return await _contactService.SaveAsync();
         }
 

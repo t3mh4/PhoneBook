@@ -1,35 +1,55 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PhoneBook.Dtos;
 
 namespace PhoneBookWebUI.Controllers
 {
     public class ContactController : Controller
     {
-        // GET: ContactController
-        public ActionResult Index()
+        private readonly HttpClient _httpClient;
+        public ContactController()
         {
-            return View();
+            _httpClient = new HttpClient
+            {
+                BaseAddress = new Uri("http://localhost:17000")
+            };
         }
 
-        // GET: ContactController/Details/5
-        public ActionResult Details(int id)
+        public async Task<ActionResult> Index()
         {
-            return View();
-        }
+            List<ContactDto> contactList;
+            contactList = await _httpClient.GetFromJsonAsync<List<ContactDto>>("contact/getall") ?? new List<ContactDto>();
+            return View(contactList);
+        }      
 
-        // GET: ContactController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: ContactController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(ContactDto contact)
         {
             try
             {
+                await _httpClient.PostAsJsonAsync("contact/save", contact);
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+        
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Delete(Guid uuid)
+        {
+            try
+            {
+                await _httpClient.DeleteAsync("contact/remove?uuid=" + uuid.ToString());
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -38,46 +58,10 @@ namespace PhoneBookWebUI.Controllers
             }
         }
 
-        // GET: ContactController/Edit/5
-        public ActionResult Edit(int id)
+        protected override void Dispose(bool disposing)
         {
-            return View();
-        }
-
-        // POST: ContactController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: ContactController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: ContactController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            _httpClient.Dispose();
+            base.Dispose(disposing);
         }
     }
 }

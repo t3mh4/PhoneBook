@@ -1,0 +1,60 @@
+﻿@model IEnumerable<PhoneBook.Dtos.ContactInfoDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Contact Info List</h1>
+
+<p>
+    <a asp-action="Create" asp-route-contactuuid="@Context.Request.Query["ContactUUID"]" class="btn btn-primary">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UUID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EMail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UUID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                 <form asp-action="Delete">
+                       @Html.Hidden("UUID",item.UUID)
+                        <input type="submit" value="Delete" class="btn btn-danger" /> 
+                    </form>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<br />
+<div>
+    <a asp-controller="Contact" asp-action="Index">Back To Contact List</a>
+</div>

@@ -31,10 +31,18 @@ namespace ContactMicroservice.Repositories
             return await _dbSet.AsNoTracking().FirstOrDefaultAsync(filter);
         }
 
-        public async Task RemoveAsync(Guid id)
+        public virtual async Task RemoveAsync(Guid uuid)
         {
-            var entity = await _dbSet.FindAsync(id);
+            var entity = await _dbSet.FindAsync(uuid);
             _dbSet.Remove(entity);
+        }
+
+        public async Task RemoveAsync(T entity)
+        {
+            await Task.Run(() =>
+            {
+                _dbSet.Remove(entity);
+            });
         }
 
         public async Task AddAsync(T entity)
