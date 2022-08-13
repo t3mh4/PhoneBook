@@ -13,10 +13,11 @@ namespace ReportMicroservice.Controllers
             _manager = manager;
         }
 
-        [HttpGet("Test")]
-        public IActionResult Test()
+        [HttpGet("GetAll")]
+        public async Task<IActionResult> GetAll()
         {
-            return Ok("Tarih ve Saat : "+DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss"));
+            return Ok(await _manager.GetAll());
         }
+
     }
 }

@@ -2,11 +2,14 @@
 
 namespace PhoneBook.Core.Enums
 {
-    enum EnumReport
+    public class EnumReport
     {
-        [Display(Name = "Hazırlanıyor")]
-        Preparing = 10,
-        [Display(Name = "Tamamlandı")]
-        Completed = 20
+        public enum Status
+        {
+            [Display(Name = "Hazırlanıyor")]
+            Preparing = 10,
+            [Display(Name = "Tamamlandı")]
+            Completed = 20
+        }
     }
 }

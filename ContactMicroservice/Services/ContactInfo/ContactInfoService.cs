@@ -22,7 +22,7 @@ namespace ContactMicroservice.Services
                     EMail = s.EMail,
                     Location = s.Location,
                     PhoneNumber = s.PhoneNumber
-                }).ToListAsync();
+                }).AsNoTracking().ToListAsync() ?? new List<ContactInfoDto>();
         }
 
         public async Task<List<LocationReportDto>> GetLocationReport()

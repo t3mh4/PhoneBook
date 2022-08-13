@@ -36,3 +36,5 @@ C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\Np
 C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
 C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\PhoneBook.Dtos.dll
 C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\PhoneBook.Dtos.pdb
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\PhoneBook.Core.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\ReportMicroservice\bin\Debug\net6.0\PhoneBook.Core.pdb

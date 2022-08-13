@@ -370,6 +370,19 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "PhoneBook.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.8"
+        },
+        "compile": {
+          "bin/placeholder/PhoneBook.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PhoneBook.Core.dll": {}
+        }
+      },
       "PhoneBook.Dtos/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -972,6 +985,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "PhoneBook.Core/1.0.0": {
+      "type": "project",
+      "path": "../PhoneBook.Core/PhoneBook.Core.csproj",
+      "msbuildProject": "../PhoneBook.Core/PhoneBook.Core.csproj"
+    },
     "PhoneBook.Dtos/1.0.0": {
       "type": "project",
       "path": "../PhoneBook.Dtos/PhoneBook.Dtos.csproj",
@@ -985,6 +1003,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.8",
       "Microsoft.Extensions.DependencyInjection >= 6.0.0",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 6.0.6",
+      "PhoneBook.Core >= 1.0.0",
       "PhoneBook.Dtos >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -1020,6 +1039,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\Ahmet\\Documents\\GitHub\\PhoneBook\\PhoneBook.Core\\PhoneBook.Core.csproj": {
+              "projectPath": "C:\\Users\\Ahmet\\Documents\\GitHub\\PhoneBook\\PhoneBook.Core\\PhoneBook.Core.csproj"
+            },
             "C:\\Users\\Ahmet\\Documents\\GitHub\\PhoneBook\\PhoneBook.Dtos\\PhoneBook.Dtos.csproj": {
               "projectPath": "C:\\Users\\Ahmet\\Documents\\GitHub\\PhoneBook\\PhoneBook.Dtos\\PhoneBook.Dtos.csproj"
             }

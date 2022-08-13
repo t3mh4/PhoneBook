@@ -10,5 +10,10 @@ namespace ReportMicroservice.Managers
         {
             _service = service;
         }
+
+        public async Task<List<ReportDto>> GetAll()
+        {
+            return await _service.GetAll();
+        }
     }
 }

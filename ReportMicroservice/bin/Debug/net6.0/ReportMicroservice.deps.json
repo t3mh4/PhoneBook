@@ -13,6 +13,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "6.0.8",
           "Microsoft.Extensions.DependencyInjection": "6.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.6",
+          "PhoneBook.Core": "1.0.0",
           "PhoneBook.Dtos": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
@@ -230,6 +231,14 @@
         }
       },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "PhoneBook.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.8"
+        },
+        "runtime": {
+          "PhoneBook.Core.dll": {}
+        }
+      },
       "PhoneBook.Dtos/1.0.0": {
         "runtime": {
           "PhoneBook.Dtos.dll": {}
@@ -438,6 +447,11 @@
       "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "path": "system.runtime.compilerservices.unsafe/6.0.0",
       "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "PhoneBook.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "PhoneBook.Dtos/1.0.0": {
       "type": "project",
