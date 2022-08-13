@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "clvjHIXVy9lBzO8jJoigck1eo+54BPSajSs0VVUtaVtjKeJkETL3Ir2TcqXRpoFOs9VxG61JkAgOUNXujMOyAw==",
+  "dgSpecHash": "BmwythIpCIwd/jPYpTySox3Zcy7o7qy9yFNu+FZQOqJ27N7fenL/TJYOtydOBHf+kJk8373Y8EyaC21Kbf0q9g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ahmet\\Documents\\GitHub\\PhoneBook\\ContactMicroservice\\ContactMicroservice.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ahmet\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\Ahmet\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\6.0.8\\microsoft.aspnetcore.diagnostics.entityframeworkcore.6.0.8.nupkg.sha512",
+    "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.8\\microsoft.entityframeworkcore.6.0.8.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.8\\microsoft.entityframeworkcore.abstractions.6.0.8.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.8\\microsoft.entityframeworkcore.analyzers.6.0.8.nupkg.sha512",

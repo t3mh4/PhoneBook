@@ -1,0 +1,40 @@
+{
+  "Routes": [
+    //{
+    //  "DownstreamPathTemplate": "/api/Contact/GetAll",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 15001
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/contact/GetAll",
+    //  "UpstreamHttpMethod": [ "GET" ]
+    //}
+    //{
+    //  "DownstreamPathTemplate": "/{url}",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 15001
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/{url}",
+    //  "UpstreamHttpMethod": [ "Get" ]
+    //}
+    {
+      "DownstreamPathTemplate": "/api/Contact/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 15001
+        }
+      ],
+      "UpstreamPathTemplate": "/c/{url}",
+      "UpstreamHttpMethod": [ "Get" ,"Post"]
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 ﻿using ContactMicroservice.Entities;
 using ContactMicroservice.Managers;
 using Microsoft.AspNetCore.Mvc;
+using PhoneBook.Dtos;
 
 namespace ContactMicroservice.Controllers
 {
@@ -11,15 +12,15 @@ namespace ContactMicroservice.Controllers
         private readonly IContactInfoManager _manager;
         public ContactInfoController(IContactInfoManager manager)
         {
-            _manager=manager;
+            _manager = manager;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Post([FromBody] ContactInfo contactInfo)
+        [HttpPost("Save")]
+        public async Task<IActionResult> Save([FromBody] ContactInfoDto contactInfoDto)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            await _manager.SaveAsync(contactInfo);
-            return Ok(contactInfo);
+            await _manager.SaveAsync(contactInfoDto);
+            return Ok(contactInfoDto);
         }
 
         [HttpDelete("Remove")]
@@ -33,18 +34,6 @@ namespace ContactMicroservice.Controllers
         {
             return Ok(await _manager.GetAllByContactUUID(contactUUID));
         }
-
-        // GET api/<ContactInfoController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<ContactInfoController>
-        
-
-        // DELETE api/<ContactInfoController>/5
        
     }
 }

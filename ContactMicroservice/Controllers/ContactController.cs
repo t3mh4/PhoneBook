@@ -1,7 +1,7 @@
 ﻿using ContactMicroservice.Entities;
 using ContactMicroservice.Managers;
 using Microsoft.AspNetCore.Mvc;
-
+using PhoneBook.Dtos;
 
 namespace ContactMicroservice.Controllers
 {
@@ -22,7 +22,7 @@ namespace ContactMicroservice.Controllers
         }
 
         [HttpPost("Save")]
-        public async Task<IActionResult> Save([FromBody] Contact contact)
+        public async Task<IActionResult> Save([FromBody] ContactDto contact)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             await _manager.SaveAsync(contact);

@@ -2,6 +2,7 @@
 using ContactMicroservice.Entities;
 using ContactMicroservice.Repositories;
 using Microsoft.EntityFrameworkCore;
+using PhoneBook.Dtos;
 
 namespace ContactMicroservice.Services
 {
@@ -11,9 +12,17 @@ namespace ContactMicroservice.Services
         {
         }
 
-        public async Task<List<ContactInfo>> GetAllByContactUUID(Guid contactUUID)
+        public async Task<List<ContactInfoDto>> GetAllByContactUUID(Guid contactUUID)
         {
-            return await _dbContext.ContactInfos.Where(w => w.ContactUUID == contactUUID).ToListAsync();
+            return await _dbContext.ContactInfos.Where(w => w.ContactUUID == contactUUID)
+                .Select(s => new ContactInfoDto
+                {
+                    UUID = s.UUID,
+                    ContactUUID = s.ContactUUID,
+                    EMail = s.EMail,
+                    Location = s.Location,
+                    PhoneNumber = s.PhoneNumber
+                }).ToListAsync();
         }
     }
 }
