@@ -1,20 +1,12 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PhoneBook.Dtos;
+using PhoneBookWebUI.Helper;
 
 namespace PhoneBookWebUI.Controllers
 {
-    public class ContactController : Controller
+    public class ContactController : BaseContoller
     {
-        private readonly HttpClient _httpClient;
-        public ContactController()
-        {
-            _httpClient = new HttpClient
-            {
-                BaseAddress = new Uri("http://localhost:17000")
-            };
-        }
-
         public async Task<ActionResult> Index()
         {
             return View(await _httpClient.GetFromJsonAsync<List<ContactDto>>("contact/getall"));

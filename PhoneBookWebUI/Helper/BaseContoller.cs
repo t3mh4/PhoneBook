@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PhoneBook.Core.Configuration;
 
 namespace PhoneBookWebUI.Helper
 {
@@ -10,7 +11,7 @@ namespace PhoneBookWebUI.Helper
         {
             _httpClient = new HttpClient
             {
-                BaseAddress = new Uri("http://localhost:17000")
+                BaseAddress = new Uri(BaseUrl.GatewayBaseHttpsUrl)
             };
         }
 

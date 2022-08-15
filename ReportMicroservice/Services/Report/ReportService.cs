@@ -22,6 +22,7 @@ namespace ReportMicroservice.Services
                 ReportDate = s.ReportDate,
                 FullPath = s.FullPath,
                 Status = ((EnumReport.Status)s.Status).GetDisplayName(),
+                FileName = Path.GetFileName(s.FullPath) ?? String.Empty
             }).ToListAsync();
         }
     }

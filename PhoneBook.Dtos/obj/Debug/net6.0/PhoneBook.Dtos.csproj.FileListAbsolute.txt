@@ -10,3 +10,6 @@ C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Dtos\obj\Debug\net6.0\PhoneB
 C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Dtos\obj\Debug\net6.0\refint\PhoneBook.Dtos.dll
 C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Dtos\obj\Debug\net6.0\PhoneBook.Dtos.pdb
 C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Dtos\obj\Debug\net6.0\ref\PhoneBook.Dtos.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Dtos\bin\Debug\net6.0\PhoneBook.Core.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Dtos\bin\Debug\net6.0\PhoneBook.Core.pdb
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Dtos\obj\Debug\net6.0\PhoneBook.Dtos.csproj.CopyComplete

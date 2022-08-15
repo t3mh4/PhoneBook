@@ -6,10 +6,15 @@ namespace PhoneBook.Core.Enums
     {
         public enum Status
         {
-            [Display(Name = "Hazırlanıyor")]
+            [Display(Name = "Preparing")]
             Preparing = 10,
-            [Display(Name = "Tamamlandı")]
+            [Display(Name = "Completed")]
             Completed = 20
+        }
+
+        public enum Command
+        {
+            Generate = 10
         }
     }
 }
