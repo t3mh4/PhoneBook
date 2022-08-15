@@ -18,7 +18,6 @@ builder.Services.AddDbContext<PhoneBookContext>(opt =>
 {
     opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 //Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore --Migration için
@@ -29,16 +28,19 @@ builder.Services.AddTransient<IContactManager, ContactManager>();
 builder.Services.AddTransient<IContactInfoManager, ContactInfoManager>();
 var app = builder.Build();
 
+Database.Initialize(app);
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+
 app.Run();

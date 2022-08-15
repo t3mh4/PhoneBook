@@ -46,6 +46,7 @@ builder.Services.AddMassTransit(m =>
 #endregion
 
 var app = builder.Build();
+Database.Initialize(app);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

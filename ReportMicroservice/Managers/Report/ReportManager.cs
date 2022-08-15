@@ -77,10 +77,5 @@ namespace ReportMicroservice.Managers
                 await _service.SaveAsync();
             }
         }
-
-
-        //todo:katmanlı mimari için ;
-        //UserToAddDTO, ve UserToListDTO şeklinde DTO'lar oluşturulabilir
-        //rabbitmq exception handling
     }
 }
