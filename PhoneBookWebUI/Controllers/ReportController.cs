@@ -1,6 +1,4 @@
 ﻿using MassTransit;
-using MassTransit.DependencyInjection;
-using MassTransit.RabbitMqTransport;
 using Microsoft.AspNetCore.Mvc;
 using PhoneBook.Core.Enums;
 using PhoneBook.Dtos;
@@ -20,6 +18,17 @@ namespace PhoneBookWebUI.Controllers
         {
             await bus.Publish(new Command() { Cmd = EnumReport.Command.Generate });
             return RedirectToAction(nameof(Index));
+        }
+
+        public ActionResult Download(string fullpath)
+        {
+            var stream = System.IO.File.OpenRead(fullpath);
+            return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", Path.GetFileName(fullpath));
+        }
+
+        public async Task<ActionResult>Details(Guid uuid)
+        {
+            return View(await _httpClient.GetFromJsonAsync<ReportDetailDto>("report/GetDetailsByUUID?uuid=" + uuid));
         }
     }
 }

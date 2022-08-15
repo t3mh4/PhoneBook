@@ -24,6 +24,7 @@ namespace ReportMicroservice.Managers
         public async Task GenerateReport()
         {
             string fileName = DateTime.Now.ToString("ddMMyyyyHHmmss");
+            string fileExtension = "xlsx";
             string directory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Reports";
             //insert report
             var report = new Report
@@ -31,7 +32,7 @@ namespace ReportMicroservice.Managers
                 CreatedDate = DateTime.UtcNow,
                 Status = EnumReport.Status.Preparing.ToInt32(),
                 ReportDate = DateTime.UtcNow,
-                FullPath = Path.Combine(directory, fileName)
+                FullPath = Path.Combine(directory, fileName + "." + fileExtension)
             };
             await Save(report);
             //save report file
@@ -48,6 +49,11 @@ namespace ReportMicroservice.Managers
                 BaseAddress = new Uri(BaseUrl.ContactMsBaseHttpsUrl)
             };
             return await _httpClient.GetFromJsonAsync<List<LocationReportDto>>("api/contactinfo/GetLocationReport");
+        }
+        
+        public async Task<ReportDetailDto> GetDetailsByUUID(Guid uuid)
+        {
+            return await _service.GetDetailsByUUID(uuid);
         }
 
         private async Task UpdateStatus(Report report)
@@ -71,6 +77,7 @@ namespace ReportMicroservice.Managers
                 await _service.SaveAsync();
             }
         }
+
 
         //todo:katmanlı mimari için ;
         //UserToAddDTO, ve UserToListDTO şeklinde DTO'lar oluşturulabilir

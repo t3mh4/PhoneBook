@@ -4,7 +4,12 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<style>
+    a.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+</style>
 <h1>Index</h1>
 
 <p>
@@ -17,50 +22,41 @@
                 @Html.DisplayNameFor(model => model.UUID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FileName)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.ReportDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CreatedDate)
+                @Html.DisplayNameFor(model => model.StatusName)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-          @*  <th>
-                @Html.DisplayNameFor(model => model.FullPath)
-            </th>*@
-         @*   <th></th>*@
+            <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.UUID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FileName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReportDate)
-            </td>
-             <td>
-                @Html.DisplayFor(modelItem => item.CreatedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-        @*    <td>
-                @Html.DisplayFor(modelItem => item.FullPath)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>*@
-        </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UUID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReportDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StatusName)
+                </td>
+                @if (item.Status == (int)PhoneBook.Core.Enums.EnumReport.Status.Preparing)
+                {
+                    <td>
+                        @Html.ActionLink("Details","Details", "Report", new {uuid=item.UUID},new{@class="btn btn-warning disabled"})
+                        @Html.ActionLink("Download","Download", "Report", new {fullpath=item.FullPath},new{@class="btn btn-info disabled"})
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        @Html.ActionLink("Details","Details", "Report", new {uuid=item.UUID},new{@class="btn btn-warning "})
+                        @Html.ActionLink("Download","Download", "Report", new {fullpath=item.FullPath},new{@class="btn btn-info"})
+                    </td>
+                }
+            </tr>
 }
     </tbody>
 </table>

@@ -6,5 +6,6 @@ namespace ReportMicroservice.Managers
     {
         Task<List<ReportDto>> GetAll();
         Task GenerateReport();
+        Task<ReportDetailDto> GetDetailsByUUID(Guid uuid);
     }
 }
