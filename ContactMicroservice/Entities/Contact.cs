@@ -8,8 +8,6 @@ namespace ContactMicroservice.Entities
     public class Contact
     {
         [Key]
-        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        //[DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public Guid UUID { get; set; }
         [Required]
         public string Name { get; set; }
