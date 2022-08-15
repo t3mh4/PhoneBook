@@ -7,5 +7,6 @@ namespace ReportMicroservice.Services
     public interface IReportService : IRepository<Report>
     {
         Task<List<ReportDto>> GetAll();
+        Task<ReportDetailDto> GetDetailsByUUID(Guid uuid);
     }
 }

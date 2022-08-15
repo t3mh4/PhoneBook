@@ -19,5 +19,10 @@ namespace ReportMicroservice.Controllers
             return Ok(await _manager.GetAll());
         }
 
+        [HttpGet("GetDetailsByUUID")]
+        public async Task<IActionResult>GetDetailsByUUID(Guid uuid)
+        {
+            return Ok(await _manager.GetDetailsByUUID(uuid));
+        }
     }
 }

@@ -10,7 +10,9 @@ namespace PhoneBook.Dtos
     {
         public Guid UUID { get; set; }
         public DateTime ReportDate { get; set; }
-        public string Status { get; set; }
+        public int Status { get; set; }
         public string FullPath { get; set; }
+        public string StatusName { get; set; }
+
     }
 }

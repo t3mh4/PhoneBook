@@ -30,3 +30,17 @@ C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Gateway\obj\Debug\net6.0\ref
 C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Gateway\obj\Debug\net6.0\PhoneBook.Gateway.pdb
 C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Gateway\obj\Debug\net6.0\PhoneBook.Gateway.genruntimeconfig.cache
 C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Gateway\obj\Debug\net6.0\ref\PhoneBook.Gateway.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Gateway\bin\Debug\net6.0\EPPlus.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Gateway\bin\Debug\net6.0\EPPlus.Interfaces.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Gateway\bin\Debug\net6.0\EPPlus.System.Drawing.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Gateway\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Gateway\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Gateway\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Gateway\bin\Debug\net6.0\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Gateway\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Gateway\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Gateway\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Gateway\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Gateway\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Gateway\bin\Debug\net6.0\PhoneBook.Core.dll
+C:\Users\Ahmet\Documents\GitHub\PhoneBook\PhoneBook.Gateway\bin\Debug\net6.0\PhoneBook.Core.pdb

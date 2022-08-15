@@ -29,6 +29,9 @@ namespace ReportMicroservice.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<string>("FullPath")
                         .IsRequired()
                         .HasColumnType("text");

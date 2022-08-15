@@ -1,7 +1,21 @@
+using MassTransit;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq((r, c) =>
+    {
+        c.Host(new Uri("rabbitmq://localhost"), hst =>
+        {
+            hst.Username("guest");
+            hst.Password("guest");
+        });
+    });
+});
 
 var app = builder.Build();
 

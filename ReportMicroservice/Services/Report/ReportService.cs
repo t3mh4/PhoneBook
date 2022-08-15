@@ -21,8 +21,19 @@ namespace ReportMicroservice.Services
                 UUID = s.UUID,
                 ReportDate = s.ReportDate,
                 FullPath = s.FullPath,
-                Status = ((EnumReport.Status)s.Status).GetDisplayName(),
+                StatusName = ((EnumReport.Status)s.Status).GetDisplayName(),
+                Status = s.Status
             }).ToListAsync();
+        }
+
+        public async Task<ReportDetailDto> GetDetailsByUUID(Guid uuid)
+        {
+            return await _dbContext.Reports.AsNoTracking().Where(r => r.UUID == uuid)
+                .Select(s => new ReportDetailDto
+            {
+                FileName = Path.GetFileName(s.FullPath),
+                CreatedDate = s.CreatedDate
+            }).FirstOrDefaultAsync()??new ReportDetailDto();
         }
     }
 }
