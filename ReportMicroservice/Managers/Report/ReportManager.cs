@@ -29,9 +29,9 @@ namespace ReportMicroservice.Managers
             //insert report
             var report = new Report
             {
-                CreatedDate = DateTime.UtcNow,
+                CreatedDate = DateTime.UtcNow.AddHours(3),
                 Status = EnumReport.Status.Preparing.ToInt32(),
-                ReportDate = DateTime.UtcNow,
+                ReportDate = DateTime.UtcNow.AddHours(3),
                 FullPath = Path.Combine(directory, fileName + "." + fileExtension)
             };
             await Save(report);
@@ -59,7 +59,7 @@ namespace ReportMicroservice.Managers
         private async Task UpdateStatus(Report report)
         {
             report.Status = EnumReport.Status.Completed.ToInt32();
-            report.CreatedDate = DateTime.UtcNow;
+            report.CreatedDate = DateTime.UtcNow.AddHours(3);
             await Save(report);
         }
 
