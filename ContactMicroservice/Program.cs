@@ -28,8 +28,6 @@ builder.Services.AddTransient<IContactManager, ContactManager>();
 builder.Services.AddTransient<IContactInfoManager, ContactInfoManager>();
 var app = builder.Build();
 
-Database.Initialize(app);
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
